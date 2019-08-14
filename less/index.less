@@ -137,5 +137,127 @@ table {
 html,
 body {
 	height: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 62.5%;
+	font-family: 'Raleway', sans-serif;
 }
 
+/****** VARIABLE *******/
+@font:1.6rem;
+
+/****** HEADER STYLE ********/
+
+header {
+
+	.links {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+
+		a {
+			text-decoration: none;
+			color: black;
+			padding: 10px;
+			font-size: @font;
+		}
+	}
+	.wrapper {
+		background-color: #e9ecef;
+		width: 100%;
+		img {
+			width: 40%;
+			margin: 20px;
+		}
+		h1 {
+			font-size: 4rem;
+			padding: 20px;
+			font-weight: bold;
+		}
+		h2{
+			font-size: @font;
+			padding: 20px;
+		}
+		hr {
+			border: .7px solid #d4d7da;
+			width: 90%;
+		}
+		p {
+			font-size: @font; 
+			padding: 20px;
+		}
+		a {
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 5px;
+			border: none;
+			background: #808080;
+			margin: 20px;
+			color: white;
+			padding: 10px;
+			font-size: @font;
+		}
+	}
+}
+
+section {
+	 display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	.container {
+		width:45%; 
+		h2 {
+			font-size: 2rem;
+			padding: 10px 0;
+			font-weight: bold;
+		}
+		p {
+			font-size: @font;
+			line-height: 1.5;
+			padding: 10px 0;
+		}
+		ul {
+			border: .5px solid black;
+		}
+		li {
+			font-size: @font;
+			border-bottom: .5px solid black;
+			padding: 10px;
+		}
+	}
+}
+
+.work {
+		h2 {
+			font-size: 2rem;
+			font-weight: bold;
+			margin: 20px 0;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin: 20px 0;
+		}
+		
+		td, th {
+			border: 1px solid #fff;
+			text-align: left;
+			padding: 8px;
+			font-size: @font;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+}
+
+footer {
+	background: #808080;
+	p {
+		font-size: @font;
+		color: #fff;
+		line-height: 1.5;
+		text-align: center;
+		padding: 10px;
+	}
+}
