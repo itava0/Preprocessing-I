@@ -145,16 +145,25 @@ body {
 
 /****** VARIABLE *******/
 @font:1.6rem;
+@color:#808080;
 
+/****** MIXINS *******/
+.flex() {
+	  display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+}
+
+.font-padding() {
+	font-size:1.6rem;
+	padding: 20px;
+}
 /****** HEADER STYLE ********/
 
 header {
 
 	.links {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-end;
-
+		.flex();
 		a {
 			text-decoration: none;
 			color: black;
@@ -175,28 +184,32 @@ header {
 			font-weight: bold;
 		}
 		h2{
-			font-size: @font;
-			padding: 20px;
+			.font-padding();
 		}
 		hr {
 			border: .7px solid #d4d7da;
 			width: 90%;
 		}
 		p {
-			font-size: @font; 
-			padding: 20px;
+			.font-padding();
 		}
 		a {
 			text-decoration: none;
 			display: inline-block;
 			border-radius: 5px;
 			border: none;
-			background: #808080;
+			background: @color;
 			margin: 20px;
 			color: white;
 			padding: 10px;
 			font-size: @font;
 		}
+	}
+	h3 {
+		font-size: 4rem;
+		font-weight: bold;
+		text-align: center;
+		margin: 20px;
 	}
 }
 
@@ -240,7 +253,7 @@ section {
 		}
 		
 		td, th {
-			border: 1px solid #fff;
+			border: 1px solid #dddddd;
 			text-align: left;
 			padding: 8px;
 			font-size: @font;
@@ -251,8 +264,39 @@ section {
 		}
 }
 
+.container-form {
+  border-radius: 5px;
+  background-color: #e9ecef;
+	padding: 20px;
+	font-size: @font;
+
+	input[type=text], input[type=email], textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		resize: vertical;
+	}
+	
+	input[type=submit] {
+		background-color: @color;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	
+	input[type=submit]:hover {
+		background-color: @color;
+	}
+}
+
 footer {
-	background: #808080;
+	background: @color;
 	p {
 		font-size: @font;
 		color: #fff;
@@ -261,3 +305,4 @@ footer {
 		padding: 10px;
 	}
 }
+

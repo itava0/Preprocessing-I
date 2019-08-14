@@ -139,6 +139,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 /****** VARIABLE *******/
+/****** MIXINS *******/
 /****** HEADER STYLE ********/
 header .links {
   display: flex;
@@ -187,6 +188,12 @@ header .wrapper a {
   padding: 10px;
   font-size: 1.6rem;
 }
+header h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
 section {
   display: flex;
   flex-flow: row wrap;
@@ -225,13 +232,42 @@ section .container li {
 }
 .work td,
 .work th {
-  border: 1px solid #fff;
+  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
   font-size: 1.6rem;
 }
 .work tr:nth-child(even) {
   background-color: #dddddd;
+}
+.container-form {
+  border-radius: 5px;
+  background-color: #e9ecef;
+  padding: 20px;
+  font-size: 1.6rem;
+}
+.container-form input[type=text],
+.container-form input[type=email],
+.container-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container-form input[type=submit] {
+  background-color: #808080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container-form input[type=submit]:hover {
+  background-color: #808080;
 }
 footer {
   background: #808080;
