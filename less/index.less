@@ -150,7 +150,7 @@ body {
 /****** MIXINS *******/
 .flex() {
 	  display: flex;
-		flex-flow: row wrap;
+		flex-wrap: wrap;
 		justify-content: flex-end;
 }
 
@@ -161,14 +161,21 @@ body {
 /****** HEADER STYLE ********/
 
 header {
-
 	.links {
 		.flex();
+		@media(max-width:500px) {
+			flex-direction: column;
+			align-items: center;
+		}
 		a {
 			text-decoration: none;
 			color: black;
 			padding: 10px;
 			font-size: @font;
+			@media(max-width:500px) {
+				width: 100%;
+				text-align: center;
+			}
 		}
 	}
 	.wrapper {
@@ -219,6 +226,12 @@ section {
 		justify-content: space-between;
 	.container {
 		width:45%; 
+		@media(max-width:500px) {
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px;
+		}
 		h2 {
 			font-size: 2rem;
 			padding: 10px 0;
@@ -245,6 +258,9 @@ section {
 			font-size: 2rem;
 			font-weight: bold;
 			margin: 20px 0;
+			@media(max-width:500px) {
+				margin-left: 10px;
+			}
 		}
 		table {
 			border-collapse: collapse;
@@ -305,4 +321,3 @@ footer {
 		padding: 10px;
 	}
 }
-

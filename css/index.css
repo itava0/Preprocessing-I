@@ -143,14 +143,26 @@ body {
 /****** HEADER STYLE ********/
 header .links {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  header .links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 header .links a {
   text-decoration: none;
   color: black;
   padding: 10px;
   font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  header .links a {
+    width: 100%;
+    text-align: center;
+  }
 }
 header .wrapper {
   background-color: #e9ecef;
@@ -202,6 +214,14 @@ section {
 section .container {
   width: 45%;
 }
+@media (max-width: 500px) {
+  section .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+}
 section .container h2 {
   font-size: 2rem;
   padding: 10px 0;
@@ -224,6 +244,11 @@ section .container li {
   font-size: 2rem;
   font-weight: bold;
   margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .work h2 {
+    margin-left: 10px;
+  }
 }
 .work table {
   border-collapse: collapse;
