@@ -1,1 +1,306 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 62.5%;
+  font-family: 'Raleway', sans-serif;
+}
+/****** VARIABLE *******/
+/****** MIXINS *******/
+/****** HEADER STYLE ********/
+header .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  header .links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header .links a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  header .links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+header .wrapper {
+  background-color: #e9ecef;
+  width: 100%;
+}
+header .wrapper img {
+  width: 40%;
+  margin: 20px;
+}
+header .wrapper h1 {
+  font-size: 4rem;
+  padding: 20px;
+  font-weight: bold;
+}
+header .wrapper h2 {
+  font-size: 1.6rem;
+  padding: 20px;
+}
+header .wrapper hr {
+  border: 0.7px solid #d4d7da;
+  width: 90%;
+}
+header .wrapper p {
+  font-size: 1.6rem;
+  padding: 20px;
+}
+header .wrapper a {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  background: #808080;
+  margin: 20px;
+  color: white;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+header h3 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+section .container {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  section .container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+}
+section .container h2 {
+  font-size: 2rem;
+  padding: 10px 0;
+  font-weight: bold;
+}
+section .container p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+section .container ul {
+  border: 0.5px solid black;
+}
+section .container li {
+  font-size: 1.6rem;
+  border-bottom: 0.5px solid black;
+  padding: 10px;
+}
+.work h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .work h2 {
+    margin-left: 10px;
+  }
+}
+.work table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+.work td,
+.work th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 1.6rem;
+}
+.work tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.container-form {
+  border-radius: 5px;
+  background-color: #e9ecef;
+  padding: 20px;
+  font-size: 1.6rem;
+}
+.container-form input[type=text],
+.container-form input[type=email],
+.container-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container-form input[type=submit] {
+  background-color: #808080;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container-form input[type=submit]:hover {
+  background-color: #808080;
+}
+footer {
+  background: #808080;
+}
+footer p {
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  padding: 10px;
+}
